@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Order Tracking",
+    "content": "Customers can track their orders from the My Orders section. Each order displays its current status and tracking information."
+  },
+  {
+    "id": 2,
+    "title": "Return Policy",
+    "content": "Customers can request a return within 7 days of receiving an eligible product. Products must be unused and in their original packaging."
+  },
+  {
+    "id": 3,
+    "title": "Payment Methods",
+    "content": "Click2Cart supports online payments through Stripe. Customers can complete their payments securely during checkout."
+  },
+  {
+    "id": 4,
+    "title": "Password Reset",
+    "content": "Customers who forget their password can use the Forgot Password option on the login page to reset their password."
+  }
+]
