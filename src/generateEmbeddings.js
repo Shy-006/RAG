@@ -1,4 +1,5 @@
 
+import "dotenv/config";
 import axios from "axios";
 import fs from "fs/promises";
 
@@ -11,7 +12,7 @@ async function generateEmbeddings(chunks) {
     const texts = chunks.map(chunk => chunk.content);
 
     const response = await axios.post(
-        "http://localhost:11434/api/embed",
+        `${process.env.OLLAMA_BASE_URL}/api/embed`,
         {
             model: "nomic-embed-text",
             input: texts
