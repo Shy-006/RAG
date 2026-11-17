@@ -1,4 +1,5 @@
 
+import "dotenv/config";
 import axios from "axios";
 
 async function generateAnswer(query, retrievedChunks) {
@@ -8,7 +9,7 @@ async function generateAnswer(query, retrievedChunks) {
     }).join("\n\n");
 
     const response = await axios.post(
-        "http://localhost:11434/api/chat",
+        `${process.env.OLLAMA_BASE_URL}/api/chat`,
         {
             model: "llama3.2",
             stream: false,

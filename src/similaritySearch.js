@@ -1,4 +1,5 @@
 
+import "dotenv/config";
 import axios from "axios";
 import fs from "fs/promises";
 
@@ -37,7 +38,7 @@ async function similaritySearch(query, topK = 3) {
     const storedChunks = JSON.parse(data);
 
     const response = await axios.post(
-        "http://localhost:11434/api/embed",
+        `${process.env.OLLAMA_BASE_URL}/api/embed`,
         {
             model: "nomic-embed-text",
             input: query
